@@ -9,3 +9,5 @@ class WasRun:
     def run(self):
         method = getattr(self, self.name)
         method()
+
+    def setUp
