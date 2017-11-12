@@ -1,13 +1,12 @@
-from wasrun import WasRun
-
-test = WasRun("testMethod")
-print test.wasRun
-test.run()
-print test.wasRun
 
 class TestCase:
     def __init__(self, name):
         self.name= name
+
+    def setUp(self):
+        pass
+
     def run(self):
+        self.setUp()
         method = getattr(self,self.name)
         method()
